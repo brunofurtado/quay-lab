@@ -4,6 +4,7 @@ metadata:
   name: quay-registry
   namespace: quay
 spec:
+  configBundleSecret: config-bundle-secret
   components:
     - kind: clair
       managed: true
