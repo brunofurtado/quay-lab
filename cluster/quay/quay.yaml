@@ -8,6 +8,14 @@ spec:
   components:
     - kind: clair
       managed: true
+      overrides:
+        resources:
+          limits:
+            cpu: "2"
+            memory: "4Gi"
+          requests:
+            cpu: "500m"
+            memory: "1Gi"
     - kind: postgres
       managed: true
     - kind: objectstorage
@@ -26,6 +34,14 @@ spec:
       managed: true
     - kind: quay
       managed: true
+      overrides:
+        resources:
+          limits:
+            cpu: "2"
+            memory: "4Gi"
+          requests:
+            cpu: "500m"
+            memory: "1Gi"
     - kind: clairpostgres
       managed: true
 
